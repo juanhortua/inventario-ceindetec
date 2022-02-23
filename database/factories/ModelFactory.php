@@ -1,5 +1,7 @@
 <?php
 
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+use Faker\Generator;
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
