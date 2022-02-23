@@ -2,8 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use Faker\Generator;
+use App\Category;
+use App\Tool;
+use App\User;
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
@@ -15,14 +18,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 // Categorias
-$factory->define(App\Category::class, function (Faker\Generator $faker) {    
+$factory->define(Category::class, function (Faker\Generator $faker) {    
     return [
         'nombre' => $faker->unique()->randomElement(['Martillo', 'Alicate','destornillador','Pulidora','Cerrucho','Pala']),
     ];
 });
 
 // tools
-$factory->define(App\Tool::class, function (Faker\Generator $faker) {    
+$factory->define(Tool::class, function (Faker\Generator $faker) {    
     return [
         'nombre' => $faker->unique()->randomElement(['Martillo Madera', 'Martillo Madera','destornillador estrella','alicate pequeño','Cerrucho grande','Pala metal']),
         'imagen' => NULL,
