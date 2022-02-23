@@ -1,6 +1,9 @@
 <?php
 
 
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}
 
 Route::get('/', function () {
 	if (Auth::check()){
