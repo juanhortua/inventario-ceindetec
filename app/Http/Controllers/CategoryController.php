@@ -52,7 +52,7 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Category $request)
+    public function store(Request $request)
     {        
 //         if ($error->fails()) {
 //             return response()->json(['errors' => $error->errors()->firts()]);
