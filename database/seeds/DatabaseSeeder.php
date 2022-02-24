@@ -2,7 +2,7 @@
 
 
 use Illuminate\Database\Seeder;
-use Faker\factory
+use Faker\factory;
 
 class DatabaseSeeder extends Seeder
 {
