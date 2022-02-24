@@ -54,23 +54,17 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {        
-//         if ($error->fails()) {
-//             return response()->json(['errors' => $error->errors()->firts()]);
-//         }
-        
         $this->validate($request, [
-            'required|string|min:4|max:25|unique:categories'
+          'nombre' =>  'required|string|min:4|max:25|unique:categories'
         ]);
 
-        if($request->ajax()){        
-            $category = Category::create([
-                'nombre' => $request['nombre'],
-            ]);        
-            
-            return response()->json([
-                "mensaje" => "creado"
-            ]);
-                            }       
+            if ($request->ajax()) {
+                Category::create([
+                    'nombre' => $request['nombre'],
+                ]);
+
+                return response()->json(["mensaje" => "creado"]);
+            }     
     }
 
     /**
