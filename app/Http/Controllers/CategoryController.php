@@ -52,11 +52,15 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CategoryCreateRequest $request)
+    public function store(Category $request)
     {        
-        if ($error->fails()) {
-            return response()->json(['errors' => $error->errors()->firts()]);
-        }
+//         if ($error->fails()) {
+//             return response()->json(['errors' => $error->errors()->firts()]);
+//         }
+        
+        $this->validate($request, [
+            'required|string|min:4|max:25|unique:categories'
+        ]);
 
         if($request->ajax()){        
             $category = Category::create([
