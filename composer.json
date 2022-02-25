@@ -14,9 +14,11 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
         "odannyc/laravel-alertify": "^1.0",
-        "yajra/laravel-datatables-oracle": "7.*",
-         "ext-gd": "*"
+        "yajra/laravel-datatables-oracle": "7.*"
     },
+     {
+    "require": { "ext-gd": "*"} 
+    } ,
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
