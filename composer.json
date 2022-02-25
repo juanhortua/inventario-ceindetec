@@ -16,9 +16,9 @@
         "odannyc/laravel-alertify": "^1.0",
         "yajra/laravel-datatables-oracle": "7.*"
     },
-     {
+     
     "require": { "ext-gd": "*"} 
-    } ,
+     ,
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
