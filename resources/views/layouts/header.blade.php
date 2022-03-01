@@ -103,7 +103,7 @@
                   </div>
                @else
                  <div class="pull-left">
-                    <a href="{{ url('profile') }}" class="btn btn-default btn-flat">Perfil</a>
+                    <a href="{{ url('user') }}" class="btn btn-default btn-flat">Perfil</a>
                   </div>
                  <div class="pull-right">
                     <a class="btn btn-default btn-flat" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
