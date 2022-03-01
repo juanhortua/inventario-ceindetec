@@ -57,6 +57,9 @@
            </div>
         @endforeach
   </div>
+  <div class="clearfix">
+                {{ $tools->links() }}
+  </div> 
 </div> 
 
     </section>
